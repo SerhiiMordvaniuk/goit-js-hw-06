@@ -8,8 +8,10 @@
 // removeItem(itemToRemove) — приймає рядок з назвою товару itemToRemove і видаляє його з масиву товарів у приватній властивості items об'єкта.
 
 class Storage {
-  #items = ["Nanitoids", "Prolonger", "Antigravitator"];
-
+  #items = [];
+  constructor(items) {
+    this.#items = items;
+  }
   getItems() {
     return this.#items;
   }
@@ -26,7 +28,12 @@ class Storage {
 //
 //
 //
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+const storage = new Storage([
+  "Nanitoids",
+  "Prolonger",
+  "Antigravitator",
+  "lolo",
+]);
 console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 
 storage.addItem("Droid");
