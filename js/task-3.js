@@ -6,7 +6,7 @@ class StringBuilder {
     this.#value = params;
   }
   getValue() {
-    return this;
+    return this.#value;
   }
   padEnd(str) {
     this.#value = this.#value + str;
